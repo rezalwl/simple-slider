@@ -1,17 +1,17 @@
 let slideIndex = 1;
-showSlides(slideIndex);
 
-nextSlides = () => {
+
+const nextSlides = () => {
   showSlides((slideIndex += 1));
 };
-prevSlides = () => {
+const prevSlides = () => {
   showSlides((slideIndex -= 1));
 };
-currentSlide = (n) => {
+const currentSlide = (n) => {
   showSlides((slideIndex = n));
 };
 
-showSlides = (n) => {
+const showSlides = (n) => {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
@@ -33,3 +33,4 @@ showSlides = (n) => {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 };
+showSlides(slideIndex);
